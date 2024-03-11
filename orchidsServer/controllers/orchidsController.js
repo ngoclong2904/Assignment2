@@ -10,6 +10,16 @@ let colorData = [
     { "id": "7", "name": "Pink" },
 ]
 
+let nationData = [
+    { "id": "1", "name": "China" },
+    { "id": "2", "name": "VietNam" },
+    { "id": "3", "name": "ThaiLand" },
+    { "id": "4", "name": "Laos" },
+    { "id": "5", "name": "Campuchia" },
+    { "id": "6", "name": "Japan" },
+    { "id": "7", "name": "Korea" },
+]
+
 class OrchidsController {
     index(req, res, next) {
         Orchids.find({})
@@ -18,6 +28,7 @@ class OrchidsController {
                     title: 'List of Orchids',
                     orchids: orchids,
                     colorList: colorData,
+                    nationList: nationData,
                     errorMess: "",
                 });
             }).catch(next);
@@ -52,6 +63,7 @@ class OrchidsController {
                     title: 'The detail of Orchid',
                     orchids: orchids,
                     colorList: colorData,
+                    nationList: nationData,
                 });
             })
             .catch(next);
@@ -72,6 +84,7 @@ class OrchidsController {
                     title: 'Orchids list of Orchids',
                     orchids: req.body,
                     colorList: colorData,
+                    nationList: nationData,
                 });
             })
     }

@@ -150,9 +150,13 @@
                             <div class="field is-narrow">
                                 <div class="control">
                                     <div class="select is-fullwidth">
-                                        <select name="Original">
-                                            <option value="true">True</option>
-                                            <option value="false">False</option>
+                                        <select name="original">
+                                            <%for (let original of nationList) { %>
+                                                <option value="<%= original.name %>">
+                                                    <%= original.name %>
+                                                </option>
+                                                <% } %>
+                                                    }
                                         </select>
                                     </div>
                                 </div>

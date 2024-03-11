@@ -17,7 +17,7 @@ const orchidsSchema = new Schema(
             require: true
         },
         original: {
-            type: Boolean,
+            type: String,
             require: true
         },
         isNatural: {

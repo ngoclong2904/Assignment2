@@ -63,11 +63,12 @@
                         <div class="control">
                             <div class="select is-fullwidth">
                                 <select name="original">
-                                    <option value="<%= orchids.original%>">
-                                        <%= orchids.original%>
-                                    </option>
-                                    <option value="true">True</option>
-                                    <option value="false">False</option>
+                                    <%for (let original of nationList){ %>
+                                        <option value="<%= original.name %>"
+                                            <%=JSON.stringify(original.name)===JSON.stringify(orchids.original) ? 'selected' : ''
+                                            %>><%= original.name %>
+                                        </option>
+                                        <% } %>
                                 </select>
                             </div>
                         </div>
@@ -117,6 +118,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="field is-horizontal">
                 <div class="field-label is-normal"></div>
                 <div class="field-body">
