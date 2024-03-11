@@ -15,7 +15,7 @@ class OrchidsController {
         Orchids.find({})
             .then((orchids) => {
                 res.render('orchids', {
-                    title: 'Orchids list of Orchids',
+                    title: 'List of Orchids',
                     orchids: orchids,
                     colorList: colorData,
                     errorMess: "",
